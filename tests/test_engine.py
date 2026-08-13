@@ -106,7 +106,7 @@ class IaTDocsEngineTests(unittest.TestCase):
             self.assertFalse(missing, missing)
 
             self.assertIn("Bookmark", html)
-            self.assertIn("Update available — refresh your browser", html)
+            self.assertIn("Update available â€” refresh your browser", html)
             self.assertIn("Return to furthest read", html)
             self.assertIn("Ticket / controlled-record reference", html)
             self.assertNotIn("class=\"splash", html)
@@ -227,7 +227,7 @@ class IaTDocsEngineTests(unittest.TestCase):
             self.assertTrue((target / "theme" / "templates" / "manual.html").is_file())
             migrated = json.loads((target / "data" / "document.json").read_text(encoding="utf-8"))
             self.assertEqual(migrated["content_path"], "content/index.md")
-            self.assertEqual(migrated["engine_version"], "0.08.2")
+            self.assertEqual(migrated["engine_version"], "0.08.9")
             self.assertTrue((target / "LEGACY-JEKYLL-MIGRATION.md").is_file())
 
     def test_theme_contract_and_no_inherited_subject_in_source(self) -> None:
@@ -242,13 +242,13 @@ class IaTDocsEngineTests(unittest.TestCase):
             "bookmarkReference",
             "bookmarkNote",
             "returnMarker",
-            "Update available — refresh your browser",
+            "Update available â€” refresh your browser",
         ):
             self.assertIn(marker, js)
 
         inherited_subject = "Legacy " + "Worked Procedure " + "Example"
         for path in ROOT.rglob("*"):
-            if not path.is_file() or "site" in path.parts or path.suffix.lower() in {".pyc", ".png", ".pdf", ".zip"}:
+            if not path.is_file() or ".git" in path.parts or ".venv" in path.parts or "site" in path.parts or path.suffix.lower() in {".pyc", ".png", ".pdf", ".zip"}:
                 continue
             try:
                 text = path.read_text(encoding="utf-8")

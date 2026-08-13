@@ -30,7 +30,7 @@ class IaTDocsCliTests(unittest.TestCase):
         self.assertEqual(completed.returncode, 0, completed.stderr)
         result = json.loads(completed.stdout)
         self.assertEqual(result["product"], "IaT Docs Engine")
-        self.assertEqual(result["engine_version"], "0.08.2")
+        self.assertEqual(result["engine_version"], "0.08.9")
         self.assertEqual(result["configuration"]["status"], "valid")
 
     def test_profiles_json(self) -> None:
