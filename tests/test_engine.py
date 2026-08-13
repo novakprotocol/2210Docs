@@ -106,7 +106,7 @@ class IaTDocsEngineTests(unittest.TestCase):
             self.assertFalse(missing, missing)
 
             self.assertIn("Bookmark", html)
-            self.assertIn("Update available â€” refresh your browser", html)
+            self.assertIn("Update available — refresh your browser", html)
             self.assertIn("Return to furthest read", html)
             self.assertIn("Ticket / controlled-record reference", html)
             self.assertNotIn("class=\"splash", html)
@@ -242,7 +242,7 @@ class IaTDocsEngineTests(unittest.TestCase):
             "bookmarkReference",
             "bookmarkNote",
             "returnMarker",
-            "Update available â€” refresh your browser",
+            "Update available — refresh your browser",
         ):
             self.assertIn(marker, js)
 
