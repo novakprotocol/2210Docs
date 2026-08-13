@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:itops:2210:revision-register:v1",
+  "title": "Controlled Revision Register",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "entries"
+  ],
+  "properties": {
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": [
+          "version",
+          "date",
+          "editor",
+          "reviewer",
+          "approver",
+          "summary",
+          "reference",
+          "reference_url"
+        ],
+        "properties": {
+          "version": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "editor": {
+            "type": "string"
+          },
+          "editor_role": {
+            "type": "string"
+          },
+          "reviewer": {
+            "type": "string"
+          },
+          "approver": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "reference": {
+            "type": "string"
+          },
+          "reference_url": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

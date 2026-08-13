@@ -1,0 +1,67 @@
+name: Refresh document intelligence and Work Ledger evidence
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 5 * * 1"
+  push:
+    branches: [main]
+    paths-ignore:
+      - "data/repository.json"
+      - "data/contributions.json"
+      - "work-ledger/contributions.json"
+      - "work-ledger/contributions.csv"
+      - "work-ledger/activity-events.csv"
+      - "site/**"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out complete Git history
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Install IaT Docs Engine and pinned dependencies
+        run: python -m pip install --disable-pip-version-check --no-build-isolation -e .
+
+      - name: Run engine and reader contract tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Generate authenticated size, history, contribution share, and Work Ledger records
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
+        run: python -m iatdocs --repo . metrics --apply --require-ghe
+
+      - name: Validate the controlled source
+        run: python -m iatdocs --repo . validate
+
+      - name: Commit generated evidence when changed
+        shell: bash
+        run: |
+          FILES=(
+            data/repository.json
+            data/contributions.json
+            work-ledger/contributions.json
+            work-ledger/contributions.csv
+            work-ledger/activity-events.csv
+          )
+          if git diff --quiet -- "${FILES[@]}"; then
+            echo "No generated document intelligence changed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "${FILES[@]}"
+          git commit -m "chore(iatdocs): refresh document intelligence [skip ci]"
+          git push

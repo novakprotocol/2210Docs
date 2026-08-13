@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:itops:2210:contribution-config:v1",
+  "title": "Contribution and Work Ledger Mapping Configuration",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "contributors"
+  ],
+  "properties": {
+    "contributors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": [
+          "name",
+          "account",
+          "work_ledger_id",
+          "position_number"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "account": {
+            "type": "string"
+          },
+          "emails": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "work_ledger_id": {
+            "type": "string"
+          },
+          "position_number": {
+            "type": "string"
+          },
+          "automation": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

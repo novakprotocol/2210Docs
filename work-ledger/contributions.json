@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "document": {
+    "document_id": "REPLACE-DOCUMENT-ID",
+    "title": "Replace With Controlled Manual Title",
+    "document_type": "IOP",
+    "version": "v0.01",
+    "repository": "OWNER/REPOSITORY",
+    "creator": {
+      "name": "Replace With Original Creator",
+      "account": "REPLACE-GHE-LOGIN",
+      "work_ledger_id": "REPLACE-WORK-LEDGER-ID",
+      "position_number": "REPLACE-POSITION-NUMBER",
+      "created_at": "YYYY-MM-DD",
+      "aliases": []
+    }
+  },
+  "generated_at": "Not yet generated",
+  "source_commit": "Not generated",
+  "baseline_mode": "after-initial-commit",
+  "baseline_commit": "Not generated",
+  "baseline_adjustment": "exclude-first-change-removals",
+  "excluded_template_words_removed": 0,
+  "metric_name": "Baseline-adjusted words touched",
+  "metric_definition": "Baseline-adjusted words touched equals token-level additions plus measured removals in document-owned paths after the configured baseline. With the default exclude-first-change-removals adjustment, inherited template words removed in the first measured change to each tracked file are recorded separately and excluded from share; subsequent replacements count both the removed token and the added token. Percent share is each human contributor's baseline-adjusted words touched divided by all human baseline-adjusted words touched in the measured Git history.",
+  "metric_caution": "This is repository activity evidence only. It does not measure quality, correctness, difficulty, approval authority, operational impact, or work performed outside this repository, and it must not be used as the sole basis for personnel or performance decisions.",
+  "contributors": [],
+  "activity_events": [],
+  "activity_event_note": "Measured non-merge Git edits in the configured document scope; the repository Git history remains authoritative."
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "version": "v0.08.9",
+      "date": "2026-08-13",
+      "editor": "Matthew S. Novak",
+      "reviewer": "Template validation suite",
+      "approver": "Matthew S. Novak",
+      "summary": "Created the canonical IaT Docs Engine v0.08.9 repository and Pages template for novakprotocol/2210Docs.",
+      "reference": "Automated dual-host bootstrap",
+      "reference_url": "https://github.com/novakprotocol/2210Docs",
+      "status": "Template"
+    }
+  ]
+}

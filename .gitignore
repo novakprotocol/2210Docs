@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.template-backup/
+site/
+dist/
+build/
+*.egg-info/
+
+# Generated Pages output; published to gh-pages, not authored on main.
+site/*
+!site/.gitkeep

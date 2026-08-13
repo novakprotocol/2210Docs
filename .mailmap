@@ -1,0 +1,4 @@
+# Optional private Git identity normalization.
+# Format examples (replace with real values in the private repository):
+# Canonical Name <canonical-email> Alias Name <alias-email>
+# Canonical Name <canonical-email> <alternate-email>

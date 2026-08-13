@@ -1,0 +1,68 @@
+name: Build and publish IaT Docs Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: iatdocs-gh-pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out complete source history
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install pinned runtime dependencies
+        run: python -m pip install --disable-pip-version-check --no-build-isolation -r requirements.txt
+
+      - name: Run engine and reader tests
+        env:
+          PYTHONPATH: src
+        run: python -m unittest discover -s tests -v
+
+      - name: Refresh reader-visible repository intelligence for this build
+        env:
+          PYTHONPATH: src
+          GITHUB_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
+        run: python -m iatdocs --repo . metrics --apply
+
+      - name: Build and validate the static source-of-truth site
+        env:
+          PYTHONPATH: src
+        run: |
+          python -m iatdocs --repo . build --strict
+          python -m iatdocs --repo . validate --built
+
+      - name: Publish generated site to gh-pages
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          source_commit="$(git rev-parse HEAD)"
+          publish_dir="$(mktemp -d)"
+          cp -a site/. "$publish_dir/"
+          printf '%s\n' "$source_commit" > "$publish_dir/SOURCE-COMMIT.txt"
+          cd "$publish_dir"
+          git init -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Publish IaT Docs Pages from $source_commit"
+          git push --force "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages

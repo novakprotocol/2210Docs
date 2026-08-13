@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:itops:2210:document-profile:v2",
+  "title": "GS-2210 Document Profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "document_type",
+    "purpose",
+    "required_modules",
+    "recommended_modules",
+    "optional_modules",
+    "default_mode"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "document_type": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "required_modules": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "integer",
+        "minimum": 2,
+        "maximum": 32
+      }
+    },
+    "recommended_modules": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "integer",
+        "minimum": 2,
+        "maximum": 32
+      }
+    },
+    "optional_modules": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "integer",
+        "minimum": 2,
+        "maximum": 32
+      }
+    },
+    "default_mode": {
+      "enum": [
+        "minimum",
+        "recommended",
+        "comprehensive"
+      ]
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "baseline_mode": "after-initial-commit",
+  "baseline_commit": "",
+  "baseline_adjustment": "exclude-first-change-removals",
+  "aliases": {
+    "M Novak": "Matthew S. Novak"
+  },
+  "accounts": {
+    "Matthew S. Novak": "Matthew-Novak"
+  },
+  "work_ledger_ids": {
+    "Matthew S. Novak": "WORK-LEDGER-ID"
+  },
+  "position_numbers": {
+    "Matthew S. Novak": "POSITION-NUMBER"
+  },
+  "excluded_authors": [
+    "github-actions[bot]",
+    "dependabot[bot]",
+    "renovate[bot]"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "document_id": "TEMPLATE-2210-DOCUMENT-ID",
+  "items": [],
+  "classifications": [
+    "authoritative-source",
+    "approved-operational-source",
+    "supporting-reference",
+    "worked-example",
+    "layout-only-example",
+    "superseded-source",
+    "excluded-restricted",
+    "unverified"
+  ],
+  "rules": {
+    "attachment_is_not_automatically_authoritative": true,
+    "attachment_is_not_automatically_an_example": true,
+    "unverified_items_cannot_supply_release_authority": true,
+    "source_role_and_permitted_use_must_be_recorded": true
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "document_id": "IATDOCS-CANONICAL-TEMPLATE",
+  "document_type": "GS-2210 CONTROLLED DOCUMENT TEMPLATE",
+  "document_profile": "canonical-template",
+  "title": "IaT Docs Engine — Canonical 2210 Template",
+  "subtitle": "Python-native controlled-document compiler, AI implementation contract, and authoritative Pages reader",
+  "summary": "Use this repository as the canonical template for separate SOP, IOP, MOP, runbook, standard, design, plan, training, catalog, and other GS-2210 document repositories.",
+  "version": "v0.08.9",
+  "status": "Template",
+  "visibility": "Public",
+  "classification": "Public repository",
+  "sensitivity": "No protected or operationally sensitive content belongs in the canonical seed.",
+  "service_or_system": "IaT Docs Engine and controlled-document template",
+  "audience": "GS-2210 authors, reviewers, approvers, engineers, and authorized AI-assisted development tools",
+  "owner": "Novak Protocol",
+  "steward": "Matthew S. Novak",
+  "approval_authority": "Repository owner",
+  "records_location": "novakprotocol/2210Docs",
+  "review_cycle": "At every template release and at least annually",
+  "supersedes": "None / configure prior document",
+  "related_documents": [],
+  "creator": {
+    "name": "Matthew S. Novak",
+    "account": "novakprotocol",
+    "work_ledger_id": "Not applicable to public mirror",
+    "position_number": "Not applicable to public mirror",
+    "created_at": "2026-08-13",
+    "aliases": [
+      "Matthew S. Novak",
+      "novakprotocol"
+    ]
+  },
+  "effective_date": "Not effective",
+  "last_review_date": "2026-08-13",
+  "review_date": "2027-08-13",
+  "source_repository": "novakprotocol/2210Docs",
+  "repository_url": "https://github.com/novakprotocol/2210Docs",
+  "ghe_host": "github.com",
+  "source_branch": "main",
+  "content_path": "content/index.md",
+  "edit_url": "https://github.com/novakprotocol/2210Docs/edit/main/content/index.md",
+  "template_version": "v0.08.9",
+  "contribution_paths": [
+    "content/index.md",
+    "data/document.json",
+    "data/revisions.json",
+    "content/attachments"
+  ],
+  "use_restriction": "Template content only. This repository does not authorize operational work. Create a new private repository, select a document profile, replace all instructional content, remove unused optional modules, complete review and approval, refresh repository intelligence, and pass release validation before declaring a derived document effective.",
+  "footer_text": "Controlled 2210 document rendered from repository Markdown and governed data. The live Pages site is the authoritative reading surface.",
+  "engine_version": "0.08.2"
+}
