@@ -6,10 +6,10 @@
   "size_bytes": 0,
   "size_display": "0 B",
   "size_band": "healthy",
-  "measured_at": "2026-08-13T22:45:18Z",
-  "source": "GitHub Enterprise REST API via GitHub CLI",
+  "measured_at": "2026-08-13T23:11:36Z",
+  "source": "GitHub Enterprise REST API Get a repository endpoint (https://github.com/novakprotocol/2210Docs)",
   "size_status": "ghe-api",
   "policy": "Under 1 GiB healthy; 1–5 GiB review; 5 GiB or larger corrective action",
-  "source_commit": "a49031910a9d",
+  "source_commit": "2772b1476e18",
   "branch": "main"
 }
