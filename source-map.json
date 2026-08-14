@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "engine": "iatdocs",
+  "engine_version": "0.08.9",
+  "build_id": "cb3f1026759ee2607736",
+  "content": [
+    {
+      "path": "content/index.md",
+      "sha256": "f76d0e9f3830cfe8218abe549fd322085b737d861b9d3bbea710956ce7b7659f",
+      "headings": [
+        {
+          "level": 2,
+          "text": "1. Template Use and Document Profile Selection",
+          "anchor": "1-template-use-and-document-profile-selection",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "2. Document Identity and Control",
+          "anchor": "2-document-identity-and-control",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "3. Executive Summary, Purpose, Objectives, and Expected Outcomes",
+          "anchor": "3-executive-summary-purpose-objectives-and-expected-outcomes",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "4. Scope, Applicability, Assumptions, Constraints, and Exclusions",
+          "anchor": "4-scope-applicability-assumptions-constraints-and-exclusions",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "5. Authority, Policy, References, Standards, and Compliance Crosswalk",
+          "anchor": "5-authority-policy-references-standards-and-compliance-crosswalk",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "6. Definitions, Acronyms, Naming, Data Classification, and Controlled Terms",
+          "anchor": "6-definitions-acronyms-naming-data-classification-and-controlled-terms",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "7. Audience, Roles, Responsibilities, Qualifications, RACI, and Separation of Duties",
+          "anchor": "7-audience-roles-responsibilities-qualifications-raci-and-separation-of-duties",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "8. Service, System, Product, or Process Overview",
+          "anchor": "8-service-system-product-or-process-overview",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "9. Architecture, Interfaces, Dependencies, Data Flows, and Integration Boundaries",
+          "anchor": "9-architecture-interfaces-dependencies-data-flows-and-integration-boundaries",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "10. Inventory, Configuration Baseline, Parameters, Schemas, and Approved Options",
+          "anchor": "10-inventory-configuration-baseline-parameters-schemas-and-approved-options",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "11. Preconditions, Prerequisites, Access, Approvals, Maintenance Window, and Readiness",
+          "anchor": "11-preconditions-prerequisites-access-approvals-maintenance-window-and-readiness",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "12. Risk, Impact, Safety, Privacy, Cybersecurity, and Change Assessment",
+          "anchor": "12-risk-impact-safety-privacy-cybersecurity-and-change-assessment",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "13. Inputs, Outputs, Artifacts, Records, and Systems of Record",
+          "anchor": "13-inputs-outputs-artifacts-records-and-systems-of-record",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "14. Detailed Procedure, Tasks, Commands, Expected Results, and Evidence",
+          "anchor": "14-detailed-procedure-tasks-commands-expected-results-and-evidence",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "15. Decision Points, Branches, Stop Conditions, Hold Points, and Escalation",
+          "anchor": "15-decision-points-branches-stop-conditions-hold-points-and-escalation",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "16. Validation, Testing, Acceptance, Quality Gates, and Independent Review",
+          "anchor": "16-validation-testing-acceptance-quality-gates-and-independent-review",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "17. Rollback, Recovery, Contingency, Failover, and Restoration",
+          "anchor": "17-rollback-recovery-contingency-failover-and-restoration",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "18. Incident, Problem, Request, Task, and Change Integration",
+          "anchor": "18-incident-problem-request-task-and-change-integration",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "19. Monitoring, Logging, Alerting, Observability, Drift, and Routine Operations",
+          "anchor": "19-monitoring-logging-alerting-observability-drift-and-routine-operations",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "20. Security, Identity, Credentials, Least Privilege, Audit, and Privacy Controls",
+          "anchor": "20-security-identity-credentials-least-privilege-audit-and-privacy-controls",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "21. Data Handling, Records, Retention, Evidence, and Chain of Custody",
+          "anchor": "21-data-handling-records-retention-evidence-and-chain-of-custody",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "22. Performance, Capacity, Availability, Reliability, and Service Levels",
+          "anchor": "22-performance-capacity-availability-reliability-and-service-levels",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "23. Continuity, Backup, Restore, Disaster Recovery, RTO, and RPO",
+          "anchor": "23-continuity-backup-restore-disaster-recovery-rto-and-rpo",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "24. Communications, Notifications, Stakeholders, and Handoffs",
+          "anchor": "24-communications-notifications-stakeholders-and-handoffs",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "25. Training, Competency, Knowledge Transfer, Job Aids, and Exercises",
+          "anchor": "25-training-competency-knowledge-transfer-job-aids-and-exercises",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "26. Exceptions, Deviations, Waivers, Emergency Use, and Compensating Controls",
+          "anchor": "26-exceptions-deviations-waivers-emergency-use-and-compensating-controls",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "27. Troubleshooting, Known Errors, Decision Matrix, and Frequently Asked Questions",
+          "anchor": "27-troubleshooting-known-errors-decision-matrix-and-frequently-asked-questions",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "28. Technician, Reviewer, and Closeout Checklists",
+          "anchor": "28-technician-reviewer-and-closeout-checklists",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "29. Metrics, Outcomes, Contribution Evidence, and Work Ledger Integration",
+          "anchor": "29-metrics-outcomes-contribution-evidence-and-work-ledger-integration",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "30. Review, Recertification, Lifecycle, Supersession, Retirement, and Decommission",
+          "anchor": "30-review-recertification-lifecycle-supersession-retirement-and-decommission",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "31. Appendices, Attachments, Diagrams, Forms, Samples, and Sanitized Examples",
+          "anchor": "31-appendices-attachments-diagrams-forms-samples-and-sanitized-examples",
+          "source": "content/index.md"
+        },
+        {
+          "level": 2,
+          "text": "32. Release Gates, Concurrence, Approval, and Control Assurance",
+          "anchor": "32-release-gates-concurrence-approval-and-control-assurance",
+          "source": "content/index.md"
+        }
+      ]
+    }
+  ]
+}

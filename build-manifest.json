@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "product": "IaT Docs Engine",
+  "engine": "iatdocs",
+  "engine_version": "0.08.9",
+  "build_id": "cb3f1026759ee2607736",
+  "generated_at": "2026-08-14T18:25:01Z",
+  "document": {
+    "document_id": "IATDOCS-CANONICAL-TEMPLATE",
+    "title": "IaT Docs Engine — Canonical 2210 Template",
+    "version": "v0.08.9",
+    "status": "Template"
+  },
+  "git": {
+    "commit": "0d4c6e26ee1b50485ea0cc4abfa34e23ca974f24",
+    "short_commit": "0d4c6e26ee1b",
+    "branch": "main",
+    "dirty": false
+  },
+  "source_digest": "cb3f1026759ee26077365efdba3115fcb5159b8290911d371d8233fdd8da395c",
+  "source_files": [
+    {
+      "path": "ai/derived-document-intake.example.json",
+      "sha256": "de71ec34052aff317ae666e7f5331d56aba6483d733d656578a826ab71f552b4"
+    },
+    {
+      "path": "ai/derived-document-intake.schema.json",
+      "sha256": "537d148663f8306b14ee9d6b94c892e9bb5777e964ad2c12f79ce0ab1f69ac43"
+    },
+    {
+      "path": "ai/document-profiles.json",
+      "sha256": "3d16b653af82df15e3d137290e34a2ec7755ecbeb221e26fe9cdedcdbd8f19a3"
+    },
+    {
+      "path": "ai/README.md",
+      "sha256": "1e60adf9027f66c0da5b9d0fb063e897181553f09ed8b90bbaa9b02dbadc078b"
+    },
+    {
+      "path": "ai/template-contract.json",
+      "sha256": "129802d556dd24e0752a8fce4987257458d9e513890e735f3ccd8e13e5e7cf56"
+    },
+    {
+      "path": "content/index.md",
+      "sha256": "f76d0e9f3830cfe8218abe549fd322085b737d861b9d3bbea710956ce7b7659f"
+    },
+    {
+      "path": "data/contributions.json",
+      "sha256": "fdd9a9bbee61c701d7e85bc818371452d501a4807f82ecde045cdcb8674ec58b"
+    },
+    {
+      "path": "data/document.json",
+      "sha256": "d5e792a98af36ce9bb3047e5da6255324f232474177a03417c71999b7905eceb"
+    },
+    {
+      "path": "data/repository.json",
+      "sha256": "236c44a3f3d36f626d31b24a02c691f1aa7db90c21663ee7dc0aab007276a434"
+    },
+    {
+      "path": "data/revisions.json",
+      "sha256": "6660d38fa277edd56dccc254bf676c9c147dbaa5384b0be31a2028bc0ca9a81f"
+    },
+    {
+      "path": "iatdocs.toml",
+      "sha256": "47a5239224fe4be974cf422d1665aaada414fa7c969f4873f993ad0c8445258a"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "2c12fd4b07fec97a8e0494c5483c5329c9024fe5247cbe83422766f3f1363a29"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "a7c9e73824c97958d72343c8ca2a8aefb6b0cb4b9d5c41eb766eda393904e52e"
+    },
+    {
+      "path": "schemas/contribution-config.schema.json",
+      "sha256": "7f2f8709156ae42dc8613b5aba3205ed4c3c24a296b28ae09aab9f3e018870bd"
+    },
+    {
+      "path": "schemas/document.schema.json",
+      "sha256": "70406fab8864e5052cb3fc71dca3e88412e9d200ac8d04b7a9121c11ddfed9b0"
+    },
+    {
+      "path": "schemas/profile.schema.json",
+      "sha256": "e6919f4363466b43e532d4fe880d5d4ec5d693c638406683a0abfcf374fa0cc5"
+    },
+    {
+      "path": "schemas/revisions.schema.json",
+      "sha256": "c0c5be9e240e518968bd33b3e1a94f077fa38245965f12787c3017002a08c312"
+    },
+    {
+      "path": "section-library/2210-master.md",
+      "sha256": "a8d6ac4def1367b34dc63a024dd4cf699e97766a2a52b1d8073e791836ab7922"
+    },
+    {
+      "path": "section-library/modules.json",
+      "sha256": "48a4b01a29631b4b6358c7ce7e1189dc609364c7740140db5a3b36a423cc730c"
+    },
+    {
+      "path": "source-material-register.json",
+      "sha256": "b1067f6be7dc1f65bf0418e230dd1266969dc9295e8473d79c7e4f10419b994a"
+    },
+    {
+      "path": "src/iatdocs/__init__.py",
+      "sha256": "fc86d931d82801b2a4e08b1987c757b5f412fb352035bfade213a4901f3cc0bf"
+    },
+    {
+      "path": "src/iatdocs/__main__.py",
+      "sha256": "59bcebe87e60d58b227961d10efb15d84d9a3989e4c8ba7c33c6c963dc56eea4"
+    },
+    {
+      "path": "src/iatdocs/__pycache__/__init__.cpython-313.pyc",
+      "sha256": "d4e3fa9f5871c6b890f53bf0cc5f2ee4c4ce56039bbd7153ef522ce0c15d4b19"
+    },
+    {
+      "path": "src/iatdocs/__pycache__/__main__.cpython-313.pyc",
+      "sha256": "49d5b5182b04dfe0de1fa4b589a5ce07dcb0b093a8887838ec487739d6f7baf5"
+    },
+    {
+      "path": "src/iatdocs/__pycache__/build.cpython-313.pyc",
+      "sha256": "8c3a4836d64a09e7fe2dca480713aa72986ed97e2c03d6c307af4a79d4401a86"
+    },
+    {
+      "path": "src/iatdocs/__pycache__/cli.cpython-313.pyc",
+      "sha256": "26dd705e15aa3f5a1f88ae98ee2f47faba035cc3b2a422ca3a47678ea7f0d0dd"
+    },
+    {
+      "path": "src/iatdocs/__pycache__/config.cpython-313.pyc",
+      "sha256": "2ecb3bce1c9e3cbc3dc49fc440e576fddd65fb7a6c049ce129cff985e58a8edf"
+    },
+    {
+      "path": "src/iatdocs/__pycache__/errors.cpython-313.pyc",
+      "sha256": "889d5aa00ae2e1c933f0ba4fd09ea66d59b7060c4deda72011ab07c5c58c9cb1"
+    },
+    {
+      "path": "src/iatdocs/__pycache__/initdoc.cpython-313.pyc",
+      "sha256": "68ef47fd5dc49b68ed4b176b493f3161e3bb661bf22121e4b6c3b6cd95a0257a"
+    },
+    {
+      "path": "src/iatdocs/__pycache__/markdown.cpython-313.pyc",
+      "sha256": "d678ea57a1a9c1e6984cdf85601e1e6acffb7d7a66234cc5c2c7ab3ca852d8ae"
+    },
+    {
+      "path": "src/iatdocs/__pycache__/metrics.cpython-313.pyc",
+      "sha256": "dcf2127b9273ef50c1931e77fbe64bbfbaf1d73f8599b5b691f5c57296cd084b"
+    },
+    {
+      "path": "src/iatdocs/__pycache__/migrate.cpython-313.pyc",
+      "sha256": "12285a9ab98bf925a59972465f84dbe5a629ef9cdf17e31a4d8ac3ef02d5b063"
+    },
+    {
+      "path": "src/iatdocs/__pycache__/serve.cpython-313.pyc",
+      "sha256": "3f59d1f82e40000d0c7136b285ba6544a97f2a0ddadfd4df819108e4b37b2fbf"
+    },
+    {
+      "path": "src/iatdocs/__pycache__/util.cpython-313.pyc",
+      "sha256": "9e02d17c5dd493f57688a21c228bc426b25f74628b610834a6be86a8131aff02"
+    },
+    {
+      "path": "src/iatdocs/__pycache__/validate.cpython-313.pyc",
+      "sha256": "300b7fdb3ab4972b11157c4fa160d6b8aeb2da60ca4bbac59e77da4b30edad64"
+    },
+    {
+      "path": "src/iatdocs/build.py",
+      "sha256": "1d526344548a5924faf6db63ef4a5c3964f26feb924f2ed3ee7e26e016bc8465"
+    },
+    {
+      "path": "src/iatdocs/cli.py",
+      "sha256": "bc2fe5b428c7e6c18f0ecf8c57c45a43d205295e13ebc177a6a50cc017b81135"
+    },
+    {
+      "path": "src/iatdocs/config.py",
+      "sha256": "0a7b8c94923ebc3e24b86b1f8688e448e8b5270a3d96fb5be56f3aea38da2dc4"
+    },
+    {
+      "path": "src/iatdocs/errors.py",
+      "sha256": "167e780110459829dd7bc71fccff650ff074126ddff366dd88a842df4fcbfb48"
+    },
+    {
+      "path": "src/iatdocs/initdoc.py",
+      "sha256": "1d3c2dbcd713089788c845b23c4ea9d657b2374074bc4feae8e90bb6b34f18c3"
+    },
+    {
+      "path": "src/iatdocs/markdown.py",
+      "sha256": "f04c04806bd4618d8279fde55f8718518fac1eb9bf65315dbf6c90249a659f09"
+    },
+    {
+      "path": "src/iatdocs/metrics.py",
+      "sha256": "a6dbd1305d5264a4cd1612a6717c163ca1b03f7652276e8634c576e5284c1208"
+    },
+    {
+      "path": "src/iatdocs/migrate.py",
+      "sha256": "6a09c50ae299c45701c54931e3ef1ac24d93fef78dedb56a1e02360c89c21bfb"
+    },
+    {
+      "path": "src/iatdocs/serve.py",
+      "sha256": "581add78978f1050a228a50beaad1429d91adbc03d615ea507e8fa00903861d4"
+    },
+    {
+      "path": "src/iatdocs/util.py",
+      "sha256": "9f81c35e244ba7551d21501da8dd7cfb35486523f0ed34c3dd4250e6dbbf9d68"
+    },
+    {
+      "path": "src/iatdocs/validate.py",
+      "sha256": "6423e86e7b3f6bf8a85348a1b4bba88a6b55213b2570f60bb76d381381ce974e"
+    },
+    {
+      "path": "TEMPLATE_VERSION",
+      "sha256": "2fa7ce3ee6d2ef875756819146a4adbee0dc369dde582f18f004ecdc0d1641c5"
+    },
+    {
+      "path": "theme/assets/css/manual.css",
+      "sha256": "44953d73009a8028583fcdb6eec0885b333612306f66131a9b7fb896065917c8"
+    },
+    {
+      "path": "theme/assets/js/manual.js",
+      "sha256": "f3e17ad0dcc78ba4fa3594fac04c5ec3b8f6738d628399a4111800d2ba11f1ac"
+    },
+    {
+      "path": "theme/templates/manual.html",
+      "sha256": "ebfc31b77ca3b9c9ac5fb2cc4e3a3218530168fa054b3949583dc9697e7fe755"
+    },
+    {
+      "path": "theme/templates/partials/cover.html",
+      "sha256": "03bfc37290a1d2ef4f36bd3302f6d86be0f836791b66c7556fb61b81b6485185"
+    },
+    {
+      "path": "theme/templates/partials/editing.html",
+      "sha256": "9595315d6a20a2ca7f2820680523f7c3011b9eb7cf9c4a061392995de73266c6"
+    },
+    {
+      "path": "theme/templates/partials/intelligence.html",
+      "sha256": "f47b3522fe7df020f69cf5d87c10094d88446055bc319d40173a2aaa3cea481b"
+    },
+    {
+      "path": "theme/templates/partials/revisions.html",
+      "sha256": "0404e4593957e87f6dc8ca5b9fc67665050983cdf42250b13778d68798c0002f"
+    },
+    {
+      "path": "tools/add_revision.py",
+      "sha256": "6c2c585f843e49d8f805a23a195e41b48c892f425c85a16c50e870f10473547e"
+    },
+    {
+      "path": "tools/refresh_pages_intelligence.py",
+      "sha256": "4341b0353a8fbc03e40c3b1c8c4b35e7fcc51a91ca67ff2add8f039652b525b7"
+    }
+  ],
+  "output_files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "404.html",
+      "bytes": 582,
+      "sha256": "5353855783212cbf6e638d2cccebe1784929fd625dbb5e29c5d8b508d1f3d7d4"
+    },
+    {
+      "path": "assets/css/manual.css",
+      "bytes": 37282,
+      "sha256": "44953d73009a8028583fcdb6eec0885b333612306f66131a9b7fb896065917c8"
+    },
+    {
+      "path": "assets/js/manual.js",
+      "bytes": 41138,
+      "sha256": "f3e17ad0dcc78ba4fa3594fac04c5ec3b8f6738d628399a4111800d2ba11f1ac"
+    },
+    {
+      "path": "build-receipt.txt",
+      "bytes": 350,
+      "sha256": "806bab0ab9cf387bef569b55c40593ebe0643df37743fa35634965c469c34b16"
+    },
+    {
+      "path": "index.html",
+      "bytes": 60389,
+      "sha256": "23fc3a5d43a00e7961923524c26703a200ac925b4e5b9e5d3bbed6768aa225cf"
+    },
+    {
+      "path": "search-index.json",
+      "bytes": 65626,
+      "sha256": "28ad55aded3d92fc500e9ce2149368e1d461e4b7898f095aa89d09e7931f71ac"
+    },
+    {
+      "path": "site-version.json",
+      "bytes": 322,
+      "sha256": "bb814b37f793ffea05d24090efb0516bd30c6c06af13c544e0ace7c148a3bf2b"
+    },
+    {
+      "path": "source-map.json",
+      "bytes": 8644,
+      "sha256": "818c2bf088e82e7f3f75c960bd4996c402902e0411c6f6fdea84f4d5229dfc22"
+    }
+  ],
+  "validation": {
+    "mode": "template",
+    "passed": true,
+    "error_count": 0,
+    "warning_count": 2,
+    "info_count": 1,
+    "errors": [],
+    "warnings": [
+      {
+        "severity": "warning",
+        "code": "PLACEHOLDER",
+        "message": "placeholder remains: None / configure prior document",
+        "path": "document.supersedes"
+      },
+      {
+        "severity": "warning",
+        "code": "PLACEHOLDER",
+        "message": "placeholder remains: Not effective",
+        "path": "document.effective_date"
+      }
+    ],
+    "info": [
+      {
+        "severity": "info",
+        "code": "VALIDATION_SUMMARY",
+        "message": "validated 1 content file(s) in template mode",
+        "path": null
+      }
+    ]
+  }
+}

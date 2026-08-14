@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "engine": "iatdocs",
+  "engine_version": "0.08.9",
+  "build_id": "cb3f1026759ee2607736",
+  "document_id": "IATDOCS-CANONICAL-TEMPLATE",
+  "document_version": "v0.08.9",
+  "source_commit": "0d4c6e26ee1b50485ea0cc4abfa34e23ca974f24",
+  "branch": "main",
+  "generated_at": "2026-08-14T18:25:01Z"
+}

@@ -1,0 +1,1450 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Use this repository as the canonical template for separate SOP, IOP, MOP, runbook, standard, design, plan, training, catalog, and other GS-2210 document repositories.">
+  <meta name="manual-build-id" content="cb3f1026759ee2607736">
+  <meta name="generator" content="IaT Docs Engine 0.08.9">
+  <title>IaT Docs Engine — Canonical 2210 Template — GS-2210 CONTROLLED DOCUMENT TEMPLATE v0.08.9</title>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('controlled-manual-theme');
+        var preferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = saved || preferred;
+      } catch (error) {
+        document.documentElement.dataset.theme = 'light';
+      }
+    }());
+  </script>
+  <link rel="stylesheet" href="assets/css/manual.css">
+</head>
+<body
+  data-document-key="novakprotocol/2210Docs|IATDOCS-CANONICAL-TEMPLATE"
+  data-document-id="IATDOCS-CANONICAL-TEMPLATE"
+  data-document-version="v0.08.9"
+  data-template-version="v0.08.9"
+  data-engine-version="0.08.9"
+  data-build-id="cb3f1026759ee2607736"
+  data-update-endpoint="site-version.json"
+  data-bookmark-limit="20"
+  data-update-check-seconds="60"
+>
+  <a class="skip-link" href="#manualContent">Skip to document content</a>
+
+  <header class="topbar" aria-label="Document controls">
+    <div class="repo-facts" title="Repository: novakprotocol/2210Docs · Source: GitHub Enterprise REST API Get a repository endpoint (https://github.com/novakprotocol/2210Docs) · Last measured: 2026-08-13T23:11:36Z · Policy: Under 1 GiB healthy; 1–5 GiB review; 5 GiB or larger corrective action">
+      <span>GHE repo size: <strong>0 B</strong></span>
+      <span>Last review: <strong>2026-08-13</strong></span>
+      <span>Review due: <strong>2027-08-13</strong></span>
+    </div>
+    <div class="brand" title="IaT Docs Engine — Canonical 2210 Template">IaT Docs Engine — Canonical 2210 Template</div>
+    <div class="spacer"></div>
+    <a class="optional" href="#document-intelligence">History</a>
+    <details id="editMenu" class="edit-menu">
+      <summary>Edit</summary>
+      <div class="edit-menu-panel" role="menu" aria-label="Repository edit links">
+          <a id="editSourceLink" role="menuitem" href="https://github.com/novakprotocol/2210Docs/edit/main/content/index.md" target="_blank" rel="noopener">Edit document</a>
+          <a id="editControlLink" role="menuitem" href="https://github.com/novakprotocol/2210Docs/edit/main/data/document.json" target="_blank" rel="noopener">Edit document control</a>
+          <a id="editRevisionsLink" role="menuitem" href="https://github.com/novakprotocol/2210Docs/edit/main/data/revisions.json" target="_blank" rel="noopener">Edit revision history</a>
+      </div>
+    </details>
+    <button id="readingButton" class="reading-primary" type="button" title="Open the first numbered document section">Read section 1</button>
+    <div id="bookmarkControl" class="bookmark-control">
+      <button id="quickBookmarkButton" class="bookmark-save-button" type="button" title="Save an additional bookmark at the current reading position; use the manager to add or edit a ticket reference and note">
+        <span>Bookmark</span><strong id="bookmarkPercent">0%</strong>
+      </button>
+      <details id="bookmarkMenu" class="bookmark-menu">
+        <summary aria-label="Manage reading progress and bookmarks" title="Manage reading progress and bookmarks">▾</summary>
+        <div class="bookmark-menu-panel" role="dialog" aria-label="Reading progress and bookmarks">
+          <section class="bookmark-progress-card" aria-label="Automatic reading progress">
+            <span class="panel-label">Automatic reading progress</span>
+            <strong id="bookmarkProgressStatus">Not started</strong>
+            <small id="bookmarkProgressDetail">Progress moves forward automatically as the reader advances through the document.</small>
+          </section>
+          <div class="bookmark-create-form" aria-label="Create bookmark">
+            <label class="bookmark-name-label" for="bookmarkName">Bookmark label <span>optional</span></label>
+            <input id="bookmarkName" class="bookmark-name-input" type="text" maxlength="80" placeholder="Example: Recheck validation evidence" autocomplete="off">
+            <label class="bookmark-name-label" for="bookmarkReference">Ticket / controlled-record reference <span>optional</span></label>
+            <input id="bookmarkReference" class="bookmark-reference-input" type="text" maxlength="120" placeholder="Example: CHG0123456, INC0098765, TASK-42, or PR #18" autocomplete="off">
+            <label class="bookmark-name-label" for="bookmarkNote">Bookmark note <span>optional</span></label>
+            <textarea id="bookmarkNote" class="bookmark-note-input" maxlength="280" rows="2" placeholder="Why this location matters or what must be revisited"></textarea>
+            <button id="saveNamedBookmarkButton" class="save-named-bookmark" type="button">Save bookmark at current position</button>
+          </div>
+          <div class="bookmark-list-heading"><strong>Saved bookmarks</strong><span><b id="bookmarkCount">0</b> / 20</span></div>
+          <div id="bookmarkList" class="bookmark-list"><p class="bookmark-empty">No additional bookmarks saved.</p></div>
+          <button id="clearReadingDataButton" class="clear-reading-data" type="button">Clear reading data</button>
+        </div>
+      </details>
+    </div>
+    <button id="navToggle" class="mobile-only" type="button" aria-controls="docnav" aria-expanded="false">Contents</button>
+    <button id="themeButton" type="button"><span data-theme-label>Dark</span><span class="theme-suffix"> theme</span></button>
+  </header>
+
+  <div id="progressLine" class="progress-line" aria-hidden="true"></div>
+  <button id="returnMarker" class="bookmark-return-marker" type="button" hidden aria-label="Return to the furthest-read point">
+    <span>Return to furthest read</span><strong id="returnMarkerPercent">0%</strong>
+  </button>
+
+  <aside id="updateNotice" class="update-notice" role="status" aria-live="polite" hidden>
+    <div>
+      <strong id="updateNoticeTitle">Update available — refresh your browser</strong>
+      <span id="updateNoticeText">A newer published build is available. Refresh your browser to read the current source.</span>
+    </div>
+    <div class="update-actions">
+      <button id="refreshUpdateButton" type="button">Refresh browser</button>
+      <button id="dismissUpdateButton" class="secondary" type="button">Not now</button>
+    </div>
+  </aside>
+
+  <div id="readingNotice" class="reading-notice" role="status" aria-live="polite" hidden></div>
+
+  <div class="manual-grid">
+    <aside id="docnav" class="docnav" aria-label="Document navigation">
+      <section class="truth-panel" aria-label="Authoritative source notice">
+        <strong>Live source of truth</strong>
+        <p>This page is the current controlled reading copy. Approved repository changes publish here; copied or captured versions are uncontrolled.</p>
+      </section>
+
+      <section class="reading-panel" aria-labelledby="reading-panel-title">
+        <span id="reading-panel-title" class="panel-label">Reading progress</span>
+        <strong id="readingStatus" aria-live="polite">Not started</strong>
+        <small id="readingTimestamp">Progress begins at section 1 and automatically follows the furthest point reached in this browser.</small>
+        <div class="reading-actions">
+          <button id="resumeSidebarButton" type="button" disabled>Resume furthest read</button>
+          <button id="startOverButton" type="button">Go to section 1</button>
+          <button id="openBookmarksButton" type="button">Manage bookmarks</button>
+        </div>
+        <div id="sidebarBookmarkList" class="sidebar-bookmark-list" aria-label="Saved bookmarks"></div>
+      </section>
+
+      <div class="nav-title">Document navigation</div>
+      <a class="control-link nav-special-link" href="#document-intelligence">
+        <span>History &amp; contribution</span>
+        <strong>0 contributors</strong>
+      </a>
+      <a class="control-link nav-special-link" href="#controlled-revisions">
+        <span>Controlled revisions</span>
+        <strong>1 entries</strong>
+      </a>
+      <a class="control-link nav-special-link" href="#editing-workflow">
+        <span>Editing workflow</span>
+        <strong>Repository source</strong>
+      </a>
+      <label class="visually-hidden" for="tocSearch">Filter document sections</label>
+      <input id="tocSearch" type="search" placeholder="Filter sections" autocomplete="off">
+      <h2 class="toc-heading">Contents</h2>
+      <ol id="tocList" class="toc-list"></ol>
+      <noscript><p class="nav-note">The contents list requires JavaScript. The document remains readable below.</p></noscript>
+
+      <div class="nav-title status-title">Document control</div>
+      <dl class="nav-metadata">
+        <div><dt>Creator</dt><dd>Matthew S. Novak</dd></div>
+        <div><dt>Type</dt><dd>GS-2210 CONTROLLED DOCUMENT TEMPLATE</dd></div>
+        <div><dt>Profile</dt><dd>canonical-template</dd></div>
+        <div><dt>Service / system</dt><dd>IaT Docs Engine and controlled-document template</dd></div>
+        <div><dt>Version</dt><dd>v0.08.9</dd></div>
+        <div><dt>Status</dt><dd>Template</dd></div>
+        <div><dt>Visibility</dt><dd>Public</dd></div>
+        <div><dt>Reviewed</dt><dd>2026-08-13</dd></div>
+        <div><dt>Review due</dt><dd>2027-08-13</dd></div>
+        <div><dt>Engine</dt><dd>0.08.9</dd></div>
+      </dl>
+    </aside>
+
+    <main class="manual-main">
+<header id="manual-top" class="cover">
+  <div class="eyebrow">GS-2210 CONTROLLED DOCUMENT TEMPLATE · IATDOCS-CANONICAL-TEMPLATE</div>
+  <h1>IaT Docs Engine — Canonical 2210 Template</h1>
+  <h2>Python-native controlled-document compiler, AI implementation contract, and authoritative Pages reader</h2>
+  <p class="lead">Use this repository as the canonical template for separate SOP, IOP, MOP, runbook, standard, design, plan, training, catalog, and other GS-2210 document repositories.</p>
+
+  <div class="badges" aria-label="Document status">
+    <span class="badge type">GS-2210 CONTROLLED DOCUMENT TEMPLATE</span>
+<span class="badge profile">canonical-template</span>    <span class="badge">IATDOCS-CANONICAL-TEMPLATE</span>
+    <span class="badge">v0.08.9</span>
+    <span class="badge draft">Template</span>
+    <span class="badge private">Public</span>
+  </div>
+
+  <dl class="document-metadata">
+    <div><dt>Creator</dt><dd>Matthew S. Novak <span class="account">@novakprotocol</span><small class="work-ledger-id">Work Ledger: Not applicable to public mirror</small></dd></div>
+    <div><dt>Created</dt><dd>2026-08-13</dd></div>
+    <div><dt>Work Ledger</dt><dd>Not applicable to public mirror · Position Not applicable to public mirror</dd></div>
+    <div><dt>Profile</dt><dd>canonical-template</dd></div>
+    <div><dt>Service / system</dt><dd>IaT Docs Engine and controlled-document template</dd></div>
+    <div><dt>Audience</dt><dd>GS-2210 authors, reviewers, approvers, engineers, and authorized AI-assisted development tools</dd></div>
+    <div><dt>Owner</dt><dd>Novak Protocol</dd></div>
+    <div><dt>Document steward</dt><dd>Matthew S. Novak</dd></div>
+    <div><dt>Approval authority</dt><dd>Repository owner</dd></div>
+    <div><dt>Classification</dt><dd>Public repository<small>No protected or operationally sensitive content belongs in the canonical seed.</small></dd></div>
+    <div><dt>Effective date</dt><dd>Not effective</dd></div>
+<div><dt>Last review</dt><dd>2026-08-13</dd></div>    <div><dt>Next review</dt><dd>2027-08-13<small>At every template release and at least annually</small></dd></div>
+    <div><dt>Supersedes</dt><dd>None / configure prior document</dd></div>
+    <div><dt>Records location</dt><dd>novakprotocol/2210Docs</dd></div>
+    <div><dt>Source repository</dt><dd><a href="https://github.com/novakprotocol/2210Docs" target="_blank" rel="noopener">novakprotocol/2210Docs</a></dd></div>
+  </dl>
+
+  <aside class="callout stop">
+    <strong>Use restriction</strong>
+    <p>Template content only. This repository does not authorize operational work. Create a new private repository, select a document profile, replace all instructional content, remove unused optional modules, complete review and approval, refresh repository intelligence, and pass release validation before declaring a derived document effective.</p>
+  </aside>
+</header><details id="editing-workflow" class="editing-workflow">
+  <summary>How this controlled document is created and edited</summary>
+  <div class="editing-workflow-body">
+    <p><strong>The canonical repository supplies the Python engine, document contract, and reader theme. Every SOP, IOP, MOP, runbook, standard, design, plan, training package, catalog, or other controlled artifact is created as its own private repository and edited in that repository.</strong> The Pages site is the controlled reading surface; content changes occur through the repository so authorship, review, approval, and history remain attributable.</p>
+    <ol>
+      <li>Create a new private controlled-document repository with <strong>Use this template</strong>. Do not write an actual controlled document in the canonical engine/template repository.</li>
+      <li>Run <code>python -m iatdocs init</code> or point an approved AI agent to <code>AGENTS.md</code> and the machine-readable contract.</li>
+      <li>Set the document ID, owner, creator, repository, version, last-review date, next-review date, and effective date in <code>data/document.json</code>.</li>
+      <li>Edit controlled Markdown under <code>content</code> on a branch. Use a pull request for review and approval.</li>
+      <li>Record material releases in <code>data/revisions.json</code>, including editor, reviewer, approver, change summary, and supporting reference.</li>
+      <li>Run <code>python -m iatdocs validate --strict</code> and <code>python -m iatdocs build --strict</code>.</li>
+      <li>After merge to <code>main</code>, the GHE workflow publishes the generated static site. Open browser tabs detect the newer build and display an update notice. Refreshing saves and restores the reader’s place.</li>
+      <li>The metrics command refreshes GHE repository size, recent edits, contributor percentages, word activity, and root-level Work Ledger integration records.</li>
+    </ol>
+    <p class="editing-note"><strong>Engine versus derived document:</strong> the canonical repository controls reusable compilation, presentation, behavior, schemas, and policy. Each derived document repository controls its own content, permissions, creator, revisions, Git history, Pages publication, and Work Ledger mappings.</p>
+  </div>
+</details><section id="document-intelligence" class="document-intelligence" aria-labelledby="document-intelligence-title">
+  <div class="intelligence-heading">
+    <div>
+      <div class="section-kicker">Reader-visible provenance</div>
+      <h2 id="document-intelligence-title">History, creator, and contribution activity</h2>
+    </div>
+    <span class="generation-pill generation-no-measured-history">no measured history</span>
+  </div>
+  <p class="section-intro">Readers can see who created the controlled document, its governed revisions, recent Git edits, and each contributor’s share of measured word activity without opening GitHub Enterprise.</p>
+
+  <div class="intelligence-cards" aria-label="Document activity summary">
+    <article class="intelligence-card creator-card">
+      <span class="card-label">Original creator</span>
+      <strong>Matthew S. Novak</strong>
+      <small>@novakprotocol · 2026-08-13<br><span class="work-ledger-id">Work Ledger: Not applicable to public mirror</span></small>
+    </article>
+    <article class="intelligence-card">
+      <span class="card-label">Contributors</span>
+      <strong class="metric-number" data-number="0">0</strong>
+      <small>Human Git authors in scope · 0 unmapped</small>
+    </article>
+    <article class="intelligence-card">
+      <span class="card-label">Human commits</span>
+      <strong class="metric-number" data-number="0">0</strong>
+      <small>Non-merge commits measured</small>
+    </article>
+    <article class="intelligence-card">
+      <span class="card-label">Words touched</span>
+      <strong class="metric-number" data-number="0">0</strong>
+      <small>Added + measured removed tokens</small>
+    </article>
+    <article class="intelligence-card">
+      <span class="card-label">Work Ledger mapping</span>
+      <strong><span class="metric-number" data-number="0">0</span> / <span class="metric-number" data-number="0">0</span></strong>
+      <small>0 contributor(s) unmapped</small>
+    </article>
+  </div>
+
+  <aside class="metric-note">
+    <strong>What the percentage means</strong>
+    <p>Baseline-adjusted words touched equals token-level additions plus measured removals in document-owned paths after the configured baseline. With the default exclude-first-change-removals adjustment, inherited template words removed in the first measured change to each tracked file are recorded separately and excluded from share; subsequent replacements count both the removed token and the added token. Percent share is each human contributor&#39;s baseline-adjusted words touched divided by all human baseline-adjusted words touched in the measured Git history.</p>
+    <p><strong>Baseline:</strong> after initial commit · a49031910a9d · exclude first change removals</p>
+    <p><strong>Work Ledger rule:</strong> This is repository activity evidence only. It does not measure quality, correctness, difficulty, approval authority, operational impact, or work performed outside this repository, and it must not be used as the sole basis for personnel or performance decisions.</p>
+  </aside>
+
+<div id="controlled-revisions" class="history-subsection" aria-labelledby="controlled-revisions-title">
+  <div class="subsection-heading">
+    <div>
+      <div class="section-kicker">Governed document record</div>
+      <h3 id="controlled-revisions-title">Controlled revision history</h3>
+    </div>
+    <div class="count-pill">1 revision</div>
+  </div>
+  <p class="section-intro">This table records material document revisions, review, approval, and the release reference. It is distinct from the automated Git activity ledger below.</p>
+
+  <div class="data-table-wrap" role="region" aria-label="Controlled revision history table" tabindex="0">
+    <table class="data-table revision-table">
+      <thead>
+        <tr>
+          <th scope="col">Version</th>
+          <th scope="col">Date</th>
+          <th scope="col">Editor</th>
+          <th scope="col">Review and approval</th>
+          <th scope="col">Material change</th>
+          <th scope="col">Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="current-revision">
+            <td>
+              <strong>v0.08.9</strong>
+<span class="revision-status">Template</span><span class="current-pill">Current</span>            </td>
+            <td><time datetime="2026-08-13">2026-08-13</time></td>
+            <td>Matthew S. Novak</td>
+            <td>
+              <span class="cell-label">Reviewed</span> Template validation suite<br>
+              <span class="cell-label">Approved</span> Matthew S. Novak
+            </td>
+            <td>Created the canonical IaT Docs Engine v0.08.9 repository and Pages template for novakprotocol/2210Docs.</td>
+            <td>
+<a href="https://github.com/novakprotocol/2210Docs" rel="noopener">Automated dual-host bootstrap</a>            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+  <div id="contribution-share" class="history-subsection" aria-labelledby="contribution-share-title">
+    <div class="subsection-heading">
+      <div>
+        <div class="section-kicker">Comparable activity</div>
+        <h3 id="contribution-share-title">Contribution share</h3>
+      </div>
+      <div class="count-pill"><span class="metric-number" data-number="0">0</span> words touched</div>
+    </div>
+    <p class="section-intro">The ranking is generated from Git history for document-owned paths. Theme files, generated metric files, merge commits, recognized bot accounts, and first-change removals of inherited template text are excluded from share.</p>
+
+    <div class="empty-state">
+      <strong>Contribution metrics have not been generated.</strong>
+      <p>Run <code>python -m iatdocs metrics --apply</code> after the repository has Git history.</p>
+    </div>
+  </div>
+
+  <div id="recent-edits" class="history-subsection" aria-labelledby="recent-edits-title">
+    <div class="subsection-heading">
+      <div>
+        <div class="section-kicker">Git activity ledger</div>
+        <h3 id="recent-edits-title">Recent edits</h3>
+      </div>
+      <div class="count-pill">0 displayed</div>
+    </div>
+    <p class="section-intro">This page summarizes recent non-merge Git commits. The complete repository history remains the authoritative technical record.</p>
+
+    <div class="data-table-wrap" role="region" aria-label="Recent edit activity table" tabindex="0">
+      <table class="data-table edit-table">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Contributor</th>
+            <th scope="col">Commit change</th>
+            <th scope="col">What changed</th>
+            <th scope="col">Words</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr><td colspan="5">No measured Git edits are available yet.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+      <article id="manualContent" class="manual-content">
+        <h2 id="1-template-use-and-document-profile-selection" class="document-heading level-2">1. Template Use and Document Profile Selection</h2>
+<p class="lead">This is the reusable 2210-series document template. It is not an operational procedure and contains no system-specific authority.</p>
+<aside class="callout template">
+  <strong>Template instruction</strong>
+  <p>Create a new private repository from this template, select the document profile, complete document control, replace all instructional text, remove unused optional modules, validate, review, approve, and then publish the controlled Pages site.</p>
+</aside>
+<table>
+<thead>
+<tr>
+  <th>Document profile</th>
+  <th>Use when the artifact must…</th>
+  <th>Typical required modules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>SOP</td>
+  <td>Establish repeatable operational policy and responsibility.</td>
+  <td>Purpose, scope, authority, roles, procedure, evidence, review.</td>
+</tr>
+<tr>
+  <td>IOP</td>
+  <td>Define an internal operating method with controls and approvals.</td>
+  <td>Baseline, authorization, steps, verification, exceptions, audit.</td>
+</tr>
+<tr>
+  <td>MOP / Implementation Plan</td>
+  <td>Control a bounded change or maintenance event.</td>
+  <td>Preconditions, impact, steps, stop points, validation, rollback, communications.</td>
+</tr>
+<tr>
+  <td>Runbook / Playbook</td>
+  <td>Guide rapid diagnosis, response, restoration, or escalation.</td>
+  <td>Triggers, triage, decision branches, actions, validation, escalation, recovery.</td>
+</tr>
+<tr>
+  <td>Work Instruction</td>
+  <td>Explain a narrow technician task at execution level.</td>
+  <td>Prerequisites, numbered actions, expected results, evidence, checklist.</td>
+</tr>
+<tr>
+  <td>Technical Standard</td>
+  <td>Define mandatory technical rules or configuration baselines.</td>
+  <td>Authority, requirements, baseline, exceptions, validation, lifecycle.</td>
+</tr>
+<tr>
+  <td>System / Service Design</td>
+  <td>Describe architecture, interfaces, data flows, controls, and tradeoffs.</td>
+  <td>Requirements, architecture, components, dependencies, security, operations.</td>
+</tr>
+<tr>
+  <td>Test / Validation Plan</td>
+  <td>Prove that requirements and controls are satisfied.</td>
+  <td>Scope, environment, cases, pass criteria, defects, evidence, acceptance.</td>
+</tr>
+<tr>
+  <td>Recovery / Continuity Plan</td>
+  <td>Restore or sustain service during disruption.</td>
+  <td>Triggers, RTO/RPO, backups, failover, restoration, communications, exercises.</td>
+</tr>
+<tr>
+  <td>Training / Job Aid</td>
+  <td>Enable qualified performance and knowledge transfer.</td>
+  <td>Audience, objectives, prerequisites, lessons, exercises, assessment, references.</td>
+</tr>
+<tr>
+  <td>Governance / Catalog</td>
+  <td>Control definitions, ownership, lifecycle, or approved options.</td>
+  <td>Authority, schema, ownership, change process, quality, review.</td>
+</tr>
+<tr>
+  <td>Retirement / Decommission Plan</td>
+  <td>Remove a system or service without losing records or control.</td>
+  <td>Inventory, dependencies, approvals, migration, destruction, validation, closure.</td>
+</tr>
+</tbody>
+</table>
+<p>See <code>2210-DOCUMENT-PROFILES.md</code>, <code>ai/document-profiles.json</code>, and the non-published <code>starters/</code> directory for profile-specific starting points. Synthetic completed examples remain isolated under <code>examples/</code>.</p>
+<aside class="callout control">
+  <strong>AI and automation contract</strong>
+  <p>An AI, GPT, coding agent, or generator must read <code>AGENTS.md</code> and <code>ai/template-contract.json</code>, preserve the controlled reader shell, and create the requested artifact in a separate private derived repository. Visual similarity alone is not conformance.</p>
+</aside>
+<h2 id="2-document-identity-and-control" class="document-heading level-2">2. Document Identity and Control</h2>
+<p class="lead">Identify exactly what the document is, who owns it, who created it, what it supersedes, and when it must be reviewed.</p>
+<table>
+<thead>
+<tr>
+  <th>Control field</th>
+  <th>Required content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Document ID</td>
+  <td>Stable identifier that does not change when the title changes.</td>
+</tr>
+<tr>
+  <td>Document profile / type</td>
+  <td>SOP, IOP, MOP, runbook, work instruction, standard, design, plan, training, catalog, or other approved profile.</td>
+</tr>
+<tr>
+  <td>Title and subtitle</td>
+  <td>Clear subject and controlled outcome.</td>
+</tr>
+<tr>
+  <td>Version and status</td>
+  <td>Draft, in review, approved, effective, superseded, retired, or other governed state.</td>
+</tr>
+<tr>
+  <td>Creator</td>
+  <td>Original creator, account, Work Ledger ID, position number, and creation date.</td>
+</tr>
+<tr>
+  <td>Owner and steward</td>
+  <td>Accountable organization and person/role maintaining the artifact.</td>
+</tr>
+<tr>
+  <td>Reviewer and approver</td>
+  <td>Required technical, operational, security, privacy, records, management, or owner concurrence.</td>
+</tr>
+<tr>
+  <td>Effective and review dates</td>
+  <td>Effective date, last review, next required review, and review cycle.</td>
+</tr>
+<tr>
+  <td>Classification / sensitivity</td>
+  <td>Approved marking and handling restrictions.</td>
+</tr>
+<tr>
+  <td>Source repository</td>
+  <td>Canonical GHE repository and branch.</td>
+</tr>
+<tr>
+  <td>Supersedes / related documents</td>
+  <td>Prior versions, dependent procedures, standards, designs, and records.</td>
+</tr>
+</tbody>
+</table>
+<aside class="callout control">
+  <strong>Single source of truth</strong>
+  <p>The published Pages site is the controlled reading surface. Repository content, review, approval, revision, and release evidence remain the controlled editing source.</p>
+</aside>
+<h2 id="3-executive-summary-purpose-objectives-and-expected-outcomes" class="document-heading level-2">3. Executive Summary, Purpose, Objectives, and Expected Outcomes</h2>
+<p class="lead">State why the artifact exists, what problem it controls, what outcome it must produce, and how success will be recognized.</p>
+<ul>
+<li><strong>Purpose:</strong> Replace with the exact operational or technical purpose.</li>
+<li><strong>Objective:</strong> Replace with measurable objectives.</li>
+<li><strong>Expected outcome:</strong> Replace with the intended service, control, or user result.</li>
+<li><strong>Business or mission value:</strong> Replace with the supported mission need.</li>
+<li><strong>Non-goals:</strong> State what the document does not attempt to authorize or solve.</li>
+</ul>
+<h2 id="4-scope-applicability-assumptions-constraints-and-exclusions" class="document-heading level-2">4. Scope, Applicability, Assumptions, Constraints, and Exclusions</h2>
+<table>
+<thead>
+<tr>
+  <th>Category</th>
+  <th>Controlled statement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Included systems / services</td>
+  <td>List platforms, applications, environments, sites, data, or service classes.</td>
+</tr>
+<tr>
+  <td>Included roles / users</td>
+  <td>Identify who may perform, approve, review, or consume the work.</td>
+</tr>
+<tr>
+  <td>Applicability triggers</td>
+  <td>Define events, schedules, thresholds, requests, or conditions that invoke the document.</td>
+</tr>
+<tr>
+  <td>Assumptions</td>
+  <td>Record assumptions that must be verified before use.</td>
+</tr>
+<tr>
+  <td>Constraints</td>
+  <td>Record technology, policy, staffing, time, access, funding, or environmental limits.</td>
+</tr>
+<tr>
+  <td>Exclusions</td>
+  <td>State what is governed elsewhere and link the controlling source.</td>
+</tr>
+<tr>
+  <td>Geographic / organizational boundary</td>
+  <td>Identify enterprise, district, division, facility, team, or service boundary.</td>
+</tr>
+</tbody>
+</table>
+<aside class="callout stop">
+  <strong>No silent scope</strong>
+  <p>A familiar name, legacy practice, or prior configuration does not establish authority. Stop when ownership, applicability, or system-of-record scope is unresolved.</p>
+</aside>
+<h2 id="5-authority-policy-references-standards-and-compliance-crosswalk" class="document-heading level-2">5. Authority, Policy, References, Standards, and Compliance Crosswalk</h2>
+<table>
+<thead>
+<tr>
+  <th>Source</th>
+  <th>Requirement controlled</th>
+  <th>Applicability</th>
+  <th>Evidence / link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Law, regulation, policy, directive, or standard</td>
+  <td>Replace with the binding requirement.</td>
+  <td>State why it applies.</td>
+  <td>Record the authoritative location.</td>
+</tr>
+<tr>
+  <td>Technical standard or architecture decision</td>
+  <td>Replace with the design or configuration requirement.</td>
+  <td>Identify affected components.</td>
+  <td>Record version and owner.</td>
+</tr>
+<tr>
+  <td>ITSM, IAM, security, privacy, records, or owner authority</td>
+  <td>Replace with the approval boundary.</td>
+  <td>Identify decision rights.</td>
+  <td>Record the controlling system.</td>
+</tr>
+</tbody>
+</table>
+<p>Use this section to map NIST, VA, OMB, CISA, organizational, platform, vendor, records, privacy, accessibility, safety, labor, acquisition, or local requirements when applicable.</p>
+<h2 id="6-definitions-acronyms-naming-data-classification-and-controlled-terms" class="document-heading level-2">6. Definitions, Acronyms, Naming, Data Classification, and Controlled Terms</h2>
+<table>
+<thead>
+<tr>
+  <th>Term / acronym</th>
+  <th>Controlled meaning</th>
+  <th>Source / owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Replace term</td>
+  <td>Define the meaning used by this document.</td>
+  <td>Identify source or decision owner.</td>
+</tr>
+<tr>
+  <td>System of record</td>
+  <td>The authoritative source for a defined class of information.</td>
+  <td>Name the approved source.</td>
+</tr>
+<tr>
+  <td>Incomplete</td>
+  <td>A required action or verification could not be performed; it is not a passing result.</td>
+  <td>Document owner.</td>
+</tr>
+</tbody>
+</table>
+<p>Also define naming conventions, identifiers, status values, severity levels, environment names, data classifications, and units of measure.</p>
+<h2 id="7-audience-roles-responsibilities-qualifications-raci-and-separation-of-duties" class="document-heading level-2">7. Audience, Roles, Responsibilities, Qualifications, RACI, and Separation of Duties</h2>
+<table>
+<thead>
+<tr>
+  <th>Role</th>
+  <th>Responsibility</th>
+  <th>Required qualification / access</th>
+  <th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Process or service owner</td>
+  <td>Owns outcome, risk, scope, and document lifecycle.</td>
+  <td>Assigned authority.</td>
+  <td>Approval record.</td>
+</tr>
+<tr>
+  <td>Document steward</td>
+  <td>Maintains content, revisions, review dates, and source integrity.</td>
+  <td>Repository access and subject knowledge.</td>
+  <td>Revision history.</td>
+</tr>
+<tr>
+  <td>Implementer</td>
+  <td>Performs only authorized work and records results.</td>
+  <td>Current role, training, access, and duty status.</td>
+  <td>Execution evidence.</td>
+</tr>
+<tr>
+  <td>Peer reviewer</td>
+  <td>Independently verifies scope, method, and result.</td>
+  <td>Independence and technical competency.</td>
+  <td>Review disposition.</td>
+</tr>
+<tr>
+  <td>Approver</td>
+  <td>Accepts defined risk and authorizes release or execution.</td>
+  <td>Delegated approval authority.</td>
+  <td>Approval evidence.</td>
+</tr>
+</tbody>
+</table>
+<p>Add RACI, segregation-of-duties, on-call, escalation, vendor, contractor, records, privacy, security, and data-owner roles as required.</p>
+<h2 id="8-service-system-product-or-process-overview" class="document-heading level-2">8. Service, System, Product, or Process Overview</h2>
+<p class="lead">Provide enough context to understand the controlled environment without exposing credentials, sensitive endpoints, or unnecessary internal details.</p>
+<table>
+<thead>
+<tr>
+  <th>Element</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Mission / service function</td>
+  <td>Describe what the service or process provides.</td>
+</tr>
+<tr>
+  <td>Users / consumers</td>
+  <td>Identify primary and dependent consumers.</td>
+</tr>
+<tr>
+  <td>Environments</td>
+  <td>Production, development, test, lab, recovery, or other approved environments.</td>
+</tr>
+<tr>
+  <td>Major components</td>
+  <td>Hardware, software, services, repositories, agents, interfaces, or teams.</td>
+</tr>
+<tr>
+  <td>Ownership boundary</td>
+  <td>Identify operational, application, infrastructure, security, vendor, and data boundaries.</td>
+</tr>
+</tbody>
+</table>
+<p>Include a sanitized architecture diagram, context diagram, swimlane, process flow, state model, or topology when it materially improves execution or review.</p>
+<h2 id="9-architecture-interfaces-dependencies-data-flows-and-integration-boundaries" class="document-heading level-2">9. Architecture, Interfaces, Dependencies, Data Flows, and Integration Boundaries</h2>
+<table>
+<thead>
+<tr>
+  <th>Component / interface</th>
+  <th>Direction</th>
+  <th>Protocol / method</th>
+  <th>Data / function</th>
+  <th>Owner</th>
+  <th>Failure effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Replace component</td>
+  <td>Inbound / outbound / bidirectional</td>
+  <td>Replace</td>
+  <td>Replace</td>
+  <td>Replace</td>
+  <td>Replace</td>
+</tr>
+</tbody>
+</table>
+<p>Document upstream and downstream dependencies, authentication boundaries, trust zones, ports, APIs, queues, schedules, data flows, time synchronization, certificates, DNS, network, storage, compute, backup, monitoring, automation, and external services as applicable.</p>
+<h2 id="10-inventory-configuration-baseline-parameters-schemas-and-approved-options" class="document-heading level-2">10. Inventory, Configuration Baseline, Parameters, Schemas, and Approved Options</h2>
+<table>
+<thead>
+<tr>
+  <th>Item / parameter</th>
+  <th>Approved value or range</th>
+  <th>Source of truth</th>
+  <th>Validation method</th>
+  <th>Change authority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Replace item</td>
+  <td>Replace approved value.</td>
+  <td>Replace authoritative catalog or configuration source.</td>
+  <td>Replace check.</td>
+  <td>Replace role or process.</td>
+</tr>
+</tbody>
+</table>
+<p>Use this module for configuration baselines, environment variables, feature flags, firmware, software versions, device inventories, service accounts, ports, paths, naming, retention, schedules, data dictionaries, JSON/YAML schemas, and approved option catalogs.</p>
+<h2 id="11-preconditions-prerequisites-access-approvals-maintenance-window-and-readiness" class="document-heading level-2">11. Preconditions, Prerequisites, Access, Approvals, Maintenance Window, and Readiness</h2>
+<aside class="callout warning">
+  <strong>Do not begin until every applicable prerequisite passes</strong>
+  <p>Missing authority, access, backup, rollback, dependency health, owner concurrence, or maintenance-window readiness is a stop condition.</p>
+</aside>
+<table>
+<thead>
+<tr>
+  <th>Prerequisite</th>
+  <th>Pass criterion</th>
+  <th>Evidence</th>
+  <th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Controlling record</td>
+  <td>Request, incident, problem, task, or change identifies scope and authority.</td>
+  <td>Record ID.</td>
+  <td>Request / change owner.</td>
+</tr>
+<tr>
+  <td>Qualified personnel</td>
+  <td>Training, role, access, and duty status are current.</td>
+  <td>Qualification evidence.</td>
+  <td>Supervisor.</td>
+</tr>
+<tr>
+  <td>Starting state</td>
+  <td>Health, configuration, capacity, alerts, backups, and dependencies are captured.</td>
+  <td>Before-state evidence.</td>
+  <td>Implementer.</td>
+</tr>
+<tr>
+  <td>Recovery readiness</td>
+  <td>Rollback or restoration is technically possible and tested as required.</td>
+  <td>Recovery evidence.</td>
+  <td>Technical owner.</td>
+</tr>
+<tr>
+  <td>Communications</td>
+  <td>Stakeholders and notification paths are identified.</td>
+  <td>Communications plan.</td>
+  <td>Coordinator.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="12-risk-impact-safety-privacy-cybersecurity-and-change-assessment" class="document-heading level-2">12. Risk, Impact, Safety, Privacy, Cybersecurity, and Change Assessment</h2>
+<table>
+<thead>
+<tr>
+  <th>Risk / impact</th>
+  <th>Likelihood</th>
+  <th>Consequence</th>
+  <th>Control / mitigation</th>
+  <th>Owner</th>
+  <th>Residual disposition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Replace risk</td>
+  <td>Low / medium / high or approved scale.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Accept / reduce / transfer / avoid.</td>
+</tr>
+</tbody>
+</table>
+<p>Consider service interruption, data loss, confidentiality, integrity, availability, privilege, privacy, records, accessibility, safety, staffing, schedule, cost, vendor, legal, labor, customer, and mission impacts.</p>
+<h2 id="13-inputs-outputs-artifacts-records-and-systems-of-record" class="document-heading level-2">13. Inputs, Outputs, Artifacts, Records, and Systems of Record</h2>
+<table>
+<thead>
+<tr>
+  <th>Artifact / record</th>
+  <th>Input or output</th>
+  <th>Authoritative location</th>
+  <th>Required fields</th>
+  <th>Retention / handling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Controlling work record</td>
+  <td>Input and output</td>
+  <td>Approved ITSM source</td>
+  <td>Scope, approvals, actions, result, evidence.</td>
+  <td>Apply approved retention.</td>
+</tr>
+<tr>
+  <td>Before / after evidence</td>
+  <td>Output</td>
+  <td>Approved evidence location</td>
+  <td>Timestamp, object, tool/version, result, reviewer.</td>
+  <td>Do not include secrets.</td>
+</tr>
+<tr>
+  <td>Configuration update</td>
+  <td>Output</td>
+  <td>Approved configuration source</td>
+  <td>Versioned, attributable, reviewable change.</td>
+  <td>Follow source governance.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="14-detailed-procedure-tasks-commands-expected-results-and-evidence" class="document-heading level-2">14. Detailed Procedure, Tasks, Commands, Expected Results, and Evidence</h2>
+<p class="lead">Write each action so a qualified 2210 technician can perform it without undocumented institutional knowledge.</p>
+<table>
+<thead>
+<tr>
+  <th style="text-align:right">Step</th>
+  <th>Action</th>
+  <th>Command / interface</th>
+  <th>Expected result</th>
+  <th>Evidence</th>
+  <th>Stop / branch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:right">1</td>
+  <td>Verify identity, scope, authority, and starting state.</td>
+  <td>Replace with approved interface or command.</td>
+  <td>Exact target and baseline are confirmed.</td>
+  <td>Before-state artifact.</td>
+  <td>Stop on mismatch.</td>
+</tr>
+<tr>
+  <td style="text-align:right">2</td>
+  <td>Perform the authorized action.</td>
+  <td>Replace with sanitized command or UI path.</td>
+  <td>Defined state change occurs.</td>
+  <td>Execution record.</td>
+  <td>Follow decision ID if result differs.</td>
+</tr>
+<tr>
+  <td style="text-align:right">3</td>
+  <td>Validate immediate health and intended result.</td>
+  <td>Replace with test.</td>
+  <td>Pass criteria are met.</td>
+  <td>Validation result.</td>
+  <td>Roll back or escalate on failure.</td>
+</tr>
+</tbody>
+</table>
+<aside class="callout evidence">
+  <strong>Evidence requirement</strong>
+  <p>For each material step, identify what proves the action occurred, who performed it, when it occurred, what object was affected, and whether the result passed.</p>
+</aside>
+<h2 id="15-decision-points-branches-stop-conditions-hold-points-and-escalation" class="document-heading level-2">15. Decision Points, Branches, Stop Conditions, Hold Points, and Escalation</h2>
+<table>
+<thead>
+<tr>
+  <th>Decision ID</th>
+  <th>Condition / observation</th>
+  <th>Action</th>
+  <th>Authority</th>
+  <th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>DEC-001</td>
+  <td>Replace condition.</td>
+  <td>Continue, hold, branch, roll back, or escalate.</td>
+  <td>Replace role.</td>
+  <td>Decision record.</td>
+</tr>
+</tbody>
+</table>
+<aside class="callout stop">
+  <strong>Objective stop conditions</strong>
+  <p>List exact technical, safety, security, ownership, approval, capacity, data, timing, or dependency conditions that require immediate stop, containment, notification, or rollback.</p>
+</aside>
+<h2 id="16-validation-testing-acceptance-quality-gates-and-independent-review" class="document-heading level-2">16. Validation, Testing, Acceptance, Quality Gates, and Independent Review</h2>
+<table>
+<thead>
+<tr>
+  <th>Test / control ID</th>
+  <th>Requirement</th>
+  <th>Method</th>
+  <th>Pass criterion</th>
+  <th>Evidence</th>
+  <th>Reviewer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>VAL-001</td>
+  <td>Identity and scope</td>
+  <td>Resolve target against the authoritative source.</td>
+  <td>Every target matches the approved record.</td>
+  <td>Query or export.</td>
+  <td>Peer reviewer.</td>
+</tr>
+<tr>
+  <td>VAL-002</td>
+  <td>Functional result</td>
+  <td>Execute representative functional test.</td>
+  <td>Intended result is demonstrated without new error.</td>
+  <td>Test record.</td>
+  <td>Service owner.</td>
+</tr>
+<tr>
+  <td>VAL-003</td>
+  <td>Security / control result</td>
+  <td>Verify applicable control.</td>
+  <td>No unauthorized broadening, exposure, or unresolved exception.</td>
+  <td>Control evidence.</td>
+  <td>Security / technical reviewer.</td>
+</tr>
+</tbody>
+</table>
+<p>Include unit, integration, system, performance, security, accessibility, backup/restore, failover, user acceptance, regression, negative, rollback, and evidence-quality tests when applicable.</p>
+<h2 id="17-rollback-recovery-contingency-failover-and-restoration" class="document-heading level-2">17. Rollback, Recovery, Contingency, Failover, and Restoration</h2>
+<table>
+<thead>
+<tr>
+  <th>Trigger</th>
+  <th>Recovery action</th>
+  <th>Recovery point / source</th>
+  <th>Validation</th>
+  <th>Escalation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Replace failure or stop condition.</td>
+  <td>Replace exact recovery steps.</td>
+  <td>Snapshot, backup, previous configuration, alternate service, or manual process.</td>
+  <td>Replace restoration tests.</td>
+  <td>Replace role and contact path.</td>
+</tr>
+</tbody>
+</table>
+<p>State rollback limits, irreversible steps, data reconciliation, transaction handling, service re-entry, incident linkage, and conditions for abandoning rollback in favor of recovery.</p>
+<h2 id="18-incident-problem-request-task-and-change-integration" class="document-heading level-2">18. Incident, Problem, Request, Task, and Change Integration</h2>
+<table>
+<thead>
+<tr>
+  <th>Record type</th>
+  <th>When required</th>
+  <th>Minimum linkage</th>
+  <th>Closure criterion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Request / task</td>
+  <td>Routine authorized service work.</td>
+  <td>Requester, owner, target, entitlement, result.</td>
+  <td>Acceptance and evidence complete.</td>
+</tr>
+<tr>
+  <td>Change</td>
+  <td>Material configuration or service change.</td>
+  <td>Risk, impact, schedule, approvals, implementation, validation, rollback.</td>
+  <td>Change review complete.</td>
+</tr>
+<tr>
+  <td>Incident</td>
+  <td>Unplanned interruption or degradation.</td>
+  <td>Detection, impact, actions, restoration, communications.</td>
+  <td>Service restored and follow-up assigned.</td>
+</tr>
+<tr>
+  <td>Problem / known error</td>
+  <td>Recurring or root-cause work.</td>
+  <td>Evidence, root cause, workaround, corrective action.</td>
+  <td>Disposition approved.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="19-monitoring-logging-alerting-observability-drift-and-routine-operations" class="document-heading level-2">19. Monitoring, Logging, Alerting, Observability, Drift, and Routine Operations</h2>
+<table>
+<thead>
+<tr>
+  <th>Signal / control</th>
+  <th>Source</th>
+  <th>Threshold / expected state</th>
+  <th>Response</th>
+  <th>Owner</th>
+  <th>Retention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Availability</td>
+  <td>Replace monitor.</td>
+  <td>Replace target or threshold.</td>
+  <td>Replace action.</td>
+  <td>Replace owner.</td>
+  <td>Replace retention.</td>
+</tr>
+<tr>
+  <td>Capacity / performance</td>
+  <td>Replace metric.</td>
+  <td>Replace warning and critical levels.</td>
+  <td>Replace response.</td>
+  <td>Replace owner.</td>
+  <td>Replace retention.</td>
+</tr>
+<tr>
+  <td>Configuration drift</td>
+  <td>Replace comparison source.</td>
+  <td>No unauthorized deviation.</td>
+  <td>Correct, except, or escalate.</td>
+  <td>Replace owner.</td>
+  <td>Replace retention.</td>
+</tr>
+</tbody>
+</table>
+<p>Document dashboards, logs, alerts, traces, synthetic tests, event correlation, false-positive handling, maintenance suppression, handoff, daily/weekly/monthly tasks, and review cadence.</p>
+<h2 id="20-security-identity-credentials-least-privilege-audit-and-privacy-controls" class="document-heading level-2">20. Security, Identity, Credentials, Least Privilege, Audit, and Privacy Controls</h2>
+<ul>
+<li>Identify approved authentication and authorization methods.</li>
+<li>Use roles or groups rather than undocumented direct assignments where required.</li>
+<li>Define credential, secret, key, token, certificate, and service-account ownership and rotation.</li>
+<li>Prohibit credentials, sensitive endpoints, protected information, or unnecessary internal details in Git.</li>
+<li>Define audit logging, privileged-action review, separation of duties, and periodic recertification.</li>
+<li>Identify privacy, data minimization, consent, disclosure, and breach-response requirements.</li>
+<li>State security stop conditions and required escalation paths.</li>
+</ul>
+<h2 id="21-data-handling-records-retention-evidence-and-chain-of-custody" class="document-heading level-2">21. Data Handling, Records, Retention, Evidence, and Chain of Custody</h2>
+<table>
+<thead>
+<tr>
+  <th>Data / evidence class</th>
+  <th>Location</th>
+  <th>Access</th>
+  <th>Retention</th>
+  <th>Integrity / custody control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Operational evidence</td>
+  <td>Approved evidence source.</td>
+  <td>Need-to-know roles.</td>
+  <td>Approved schedule.</td>
+  <td>Immutable or attributable record as required.</td>
+</tr>
+<tr>
+  <td>Sensitive data</td>
+  <td>Approved protected location.</td>
+  <td>Authorized roles only.</td>
+  <td>Approved schedule.</td>
+  <td>Encryption and handling controls.</td>
+</tr>
+<tr>
+  <td>Temporary working data</td>
+  <td>Approved temporary location.</td>
+  <td>Assigned personnel.</td>
+  <td>Delete or sanitize after use.</td>
+  <td>Document disposition.</td>
+</tr>
+</tbody>
+</table>
+<p>Define correction, supersession, legal hold, export, audit access, evidence packaging, hashing, timestamps, time source, and chain-of-custody requirements when applicable.</p>
+<h2 id="22-performance-capacity-availability-reliability-and-service-levels" class="document-heading level-2">22. Performance, Capacity, Availability, Reliability, and Service Levels</h2>
+<table>
+<thead>
+<tr>
+  <th>Measure</th>
+  <th>Baseline</th>
+  <th>Target / threshold</th>
+  <th>Collection method</th>
+  <th>Owner</th>
+  <th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Availability / SLO</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+</tr>
+<tr>
+  <td>Capacity</td>
+  <td>Replace.</td>
+  <td>Warning / critical / forecast horizon.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+</tr>
+<tr>
+  <td>Performance</td>
+  <td>Replace latency, throughput, queue, or utilization measure.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+</tr>
+<tr>
+  <td>Reliability</td>
+  <td>Replace failure, error, or recovery measure.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="23-continuity-backup-restore-disaster-recovery-rto-and-rpo" class="document-heading level-2">23. Continuity, Backup, Restore, Disaster Recovery, RTO, and RPO</h2>
+<table>
+<thead>
+<tr>
+  <th>Service / data set</th>
+  <th>Backup method</th>
+  <th>Frequency / retention</th>
+  <th>RPO</th>
+  <th>RTO</th>
+  <th>Recovery location</th>
+  <th>Test cadence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Replace</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+</tr>
+</tbody>
+</table>
+<p>Document failover authority, recovery sequence, dependency order, recovery communications, restoration validation, fallback, exercise schedule, lessons learned, and unresolved recovery gaps.</p>
+<h2 id="24-communications-notifications-stakeholders-and-handoffs" class="document-heading level-2">24. Communications, Notifications, Stakeholders, and Handoffs</h2>
+<table>
+<thead>
+<tr>
+  <th>Event / phase</th>
+  <th>Audience</th>
+  <th>Message owner</th>
+  <th>Channel</th>
+  <th>Timing</th>
+  <th>Required content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Planned start</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Scope, expected impact, support path.</td>
+</tr>
+<tr>
+  <td>Status / delay</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Current state, risk, next update.</td>
+</tr>
+<tr>
+  <td>Completion / restoration</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Result, validation, residual issues.</td>
+</tr>
+<tr>
+  <td>Escalation</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Replace.</td>
+  <td>Severity, impact, actions, decision needed.</td>
+</tr>
+</tbody>
+</table>
+<p>Include shift handoff, operations-center coordination, customer messaging, leadership updates, vendor coordination, and after-action distribution when required.</p>
+<h2 id="25-training-competency-knowledge-transfer-job-aids-and-exercises" class="document-heading level-2">25. Training, Competency, Knowledge Transfer, Job Aids, and Exercises</h2>
+<table>
+<thead>
+<tr>
+  <th>Audience / role</th>
+  <th>Required competency</th>
+  <th>Training method</th>
+  <th>Assessment</th>
+  <th>Refresher cadence</th>
+  <th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Replace role</td>
+  <td>Replace knowledge, skill, and authorization.</td>
+  <td>Instructor-led, self-study, lab, simulation, or supervised execution.</td>
+  <td>Replace pass criterion.</td>
+  <td>Replace.</td>
+  <td>Training record.</td>
+</tr>
+</tbody>
+</table>
+<p>Include learning objectives, prerequisites, instructor notes, labs, simulations, exercises, scenario injects, evaluation, remediation, accessibility, and knowledge-transfer requirements.</p>
+<h2 id="26-exceptions-deviations-waivers-emergency-use-and-compensating-controls" class="document-heading level-2">26. Exceptions, Deviations, Waivers, Emergency Use, and Compensating Controls</h2>
+<table>
+<thead>
+<tr>
+  <th>Field</th>
+  <th>Minimum content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Exception / waiver ID</td>
+  <td>Unique identifier linked to the authoritative record.</td>
+</tr>
+<tr>
+  <td>Exact scope</td>
+  <td>System, service, object, user, configuration, location, and duration.</td>
+</tr>
+<tr>
+  <td>Justification</td>
+  <td>Why the normal control cannot be met.</td>
+</tr>
+<tr>
+  <td>Risk</td>
+  <td>Exposure, likelihood, consequence, and affected mission.</td>
+</tr>
+<tr>
+  <td>Compensating control</td>
+  <td>Temporary control that limits risk.</td>
+</tr>
+<tr>
+  <td>Authority</td>
+  <td>Required owner, technical, security, privacy, records, and management approval.</td>
+</tr>
+<tr>
+  <td>Effective / expiration</td>
+  <td>No indefinite exception.</td>
+</tr>
+<tr>
+  <td>Restoration</td>
+  <td>Exact return-to-standard plan and validation.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="27-troubleshooting-known-errors-decision-matrix-and-frequently-asked-questions" class="document-heading level-2">27. Troubleshooting, Known Errors, Decision Matrix, and Frequently Asked Questions</h2>
+<table>
+<thead>
+<tr>
+  <th>Symptom / event</th>
+  <th>Probable cause</th>
+  <th>Diagnostic check</th>
+  <th>Corrective action</th>
+  <th>Escalation / record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Replace symptom.</td>
+  <td>Replace cause.</td>
+  <td>Replace safe diagnostic.</td>
+  <td>Replace bounded action.</td>
+  <td>Replace route.</td>
+</tr>
+</tbody>
+</table>
+<p>Add known errors, workarounds, unsupported actions, false positives, dependency failures, diagnostic decision trees, and escalation criteria. Do not place live credentials or sensitive endpoint inventories in this section.</p>
+<h2 id="28-technician-reviewer-and-closeout-checklists" class="document-heading level-2">28. Technician, Reviewer, and Closeout Checklists</h2>
+<table>
+<thead>
+<tr>
+  <th>Phase</th>
+  <th>Checklist</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Before</td>
+  <td>Qualified and assigned; controlling record; scope and owner verified; current source; access; dependency health; before state; backup; rollback; approvals; communications.</td>
+</tr>
+<tr>
+  <td>During</td>
+  <td>Follow numbered steps; capture evidence; protect credentials and sensitive data; observe hold and stop points; do not expand scope.</td>
+</tr>
+<tr>
+  <td>Validate</td>
+  <td>Functional, technical, security, data, performance, monitoring, recovery, and owner-acceptance checks completed as applicable.</td>
+</tr>
+<tr>
+  <td>Closeout</td>
+  <td>After state; result; exceptions; residual risk; reviewer; approvals; actual timing; evidence links; handoff; corrective actions; record closure.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="29-metrics-outcomes-contribution-evidence-and-work-ledger-integration" class="document-heading level-2">29. Metrics, Outcomes, Contribution Evidence, and Work Ledger Integration</h2>
+<ul>
+<li>Define service, control, risk, quality, timeliness, reliability, customer, or mission outcomes.</li>
+<li>Distinguish output counts from meaningful outcomes.</li>
+<li>Record data source, formula, owner, cadence, threshold, and limitations.</li>
+<li>Use repository contribution evidence to show attributable document activity, not as a standalone measure of quality or performance.</li>
+<li>Map approved contributor identities to Work Ledger IDs and position numbers when integration is authorized.</li>
+<li>Prevent the document or repository from becoming an unauthorized personnel record.</li>
+</ul>
+<h2 id="30-review-recertification-lifecycle-supersession-retirement-and-decommission" class="document-heading level-2">30. Review, Recertification, Lifecycle, Supersession, Retirement, and Decommission</h2>
+<table>
+<thead>
+<tr>
+  <th>Trigger / cadence</th>
+  <th>Review owner</th>
+  <th>Required review</th>
+  <th>Disposition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Material change</td>
+  <td>Document owner and affected technical owners.</td>
+  <td>Scope, authority, architecture, risk, procedure, tests, evidence.</td>
+  <td>Revise and approve.</td>
+</tr>
+<tr>
+  <td>Scheduled review</td>
+  <td>Named steward and approvers.</td>
+  <td>Currency, ownership, references, controls, exceptions, metrics.</td>
+  <td>Reapprove, revise, or retire.</td>
+</tr>
+<tr>
+  <td>Incident / audit / finding</td>
+  <td>Assigned owner.</td>
+  <td>Root cause, control gap, procedure effectiveness.</td>
+  <td>Corrective revision.</td>
+</tr>
+<tr>
+  <td>Retirement / replacement</td>
+  <td>Owner, records, security, and affected stakeholders.</td>
+  <td>Migration, record preservation, access removal, archive, redirects.</td>
+  <td>Supersede or retire.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="31-appendices-attachments-diagrams-forms-samples-and-sanitized-examples" class="document-heading level-2">31. Appendices, Attachments, Diagrams, Forms, Samples, and Sanitized Examples</h2>
+<p>Use appendices for material that supports execution without interrupting the controlled procedure:</p>
+<ul>
+<li>Architecture and process diagrams</li>
+<li>RACI and contact-role matrices</li>
+<li>Checklists and forms</li>
+<li>Configuration schemas and data dictionaries</li>
+<li>Sanitized commands and expected outputs</li>
+<li>Test cases and acceptance forms</li>
+<li>Communication templates</li>
+<li>Risk and exception forms</li>
+<li>Evidence manifests and hashes</li>
+<li>Reference tables, catalogs, and mappings</li>
+<li>Training exercises and job aids</li>
+</ul>
+<p>Store attachments under <code>docs/attachments/</code>. Do not include credentials, live secrets, transient tokenized URLs, protected data, or unnecessary internal inventory.</p>
+<h2 id="32-release-gates-concurrence-approval-and-control-assurance" class="document-heading level-2">32. Release Gates, Concurrence, Approval, and Control Assurance</h2>
+<table>
+<thead>
+<tr>
+  <th>Gate</th>
+  <th>Owner</th>
+  <th>Pass criterion</th>
+  <th>Evidence</th>
+  <th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Content complete</td>
+  <td>Document steward</td>
+  <td>All required modules complete; unused optional modules removed.</td>
+  <td>Review checklist.</td>
+  <td>Open.</td>
+</tr>
+<tr>
+  <td>Technical review</td>
+  <td>Technical owner</td>
+  <td>Method, commands, architecture, validation, rollback, and monitoring are correct.</td>
+  <td>Review record.</td>
+  <td>Open.</td>
+</tr>
+<tr>
+  <td>Operational review</td>
+  <td>Operations owner</td>
+  <td>Procedure is executable, supportable, and integrated with work systems.</td>
+  <td>Review record.</td>
+  <td>Open.</td>
+</tr>
+<tr>
+  <td>Security / privacy / records review</td>
+  <td>Applicable control owners</td>
+  <td>Required controls and handling rules are satisfied.</td>
+  <td>Concurrence.</td>
+  <td>Open / N/A with authority.</td>
+</tr>
+<tr>
+  <td>Owner acceptance</td>
+  <td>Service / data / process owner</td>
+  <td>Outcome and residual risk are accepted.</td>
+  <td>Acceptance record.</td>
+  <td>Open.</td>
+</tr>
+<tr>
+  <td>Publication approval</td>
+  <td>Authorized approver</td>
+  <td>Version, status, effective date, review date, and revision entry are complete.</td>
+  <td>Release approval.</td>
+  <td>Open.</td>
+</tr>
+</tbody>
+</table>
+<aside class="callout warning">
+  <strong>Template release conclusion</strong>
+  <p>A derived document must not be declared effective while placeholders remain, approvals are unresolved, repository intelligence is stale, required evidence is absent, or validation reports an error.</p>
+</aside>
+
+      </article>
+
+      <footer>
+        <p>Controlled 2210 document rendered from repository Markdown and governed data. The live Pages site is the authoritative reading surface.</p>
+        <p>IATDOCS-CANONICAL-TEMPLATE · v0.08.9 · IaT Docs Engine 0.08.9</p>
+        <p>Contribution evidence a490319 · generated 2026-08-13T23:11:36Z</p>
+      </footer>
+    </main>
+  </div>
+
+  <button id="backToTop" class="backtotop" type="button" aria-label="Back to top">↑</button>
+  <script src="assets/js/manual.js" defer></script>
+</body>
+</html>
