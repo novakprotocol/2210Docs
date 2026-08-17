@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "status": "no-measured-history",
-  "generated_at": "2026-08-13T23:11:36Z",
+  "generated_at": "2026-08-17T05:53:14Z",
   "source": "Non-merge Git author history for document-owned paths; identities normalized through .mailmap and contribution-config mappings when present",
   "source_commit": "a490319",
   "branch": "main",
